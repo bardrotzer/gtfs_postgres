@@ -24,3 +24,7 @@ export interface IStopsSmall {
     stop_name: string
   }
 }
+
+export interface IRequestGetName {
+  stationname: string
+}

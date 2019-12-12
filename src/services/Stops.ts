@@ -11,4 +11,9 @@ export default class Stops  {
     const data: IStopsSmall = await db.manyOrNone(`SELECT DISTINCT resolvedname, stop_id FROM stop_names WHERE searchterm LIKE '${term}%'`);
     return data;
   }
+
+  static async getStationsByName(stop: string): Promise<IStops> {
+    const data: IStops = await db.manyOrNone('select * from stops where stop_name like $1', [stop]);
+    return data;
+  }
 }
