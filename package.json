@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "scripts": {
     "serve": "nodemon --config \"nodemon.json\"/",
+
     "build": "babel -d ./dist ./src"
   },
   "repository": "git@github.com:bardrotzer/train-schedules.git",

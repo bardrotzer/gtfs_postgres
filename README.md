@@ -3,7 +3,7 @@ This tool will digest transport data in a postgres database.
 
 # Installation
 
-The trans schedules is running on `node express` using `yarn` as package manager. The database used is a `postgres` databse, I have not cared to write any abstraction around this database, but feel free. all
+The trains schedules is running on `node express` using `yarn` as package manager. The database used is a `postgres` databse, I have not cared to write any abstraction around this database, but feel free.
 
 ## repo and code
 
