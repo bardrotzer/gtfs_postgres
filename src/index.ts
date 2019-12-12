@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import express from "express";
 import dotenv from 'dotenv';
 import router from '@/routes/index';
+import morgan from 'morgan';
 
 // load the dotenv lib
 dotenv.config();
@@ -14,6 +15,8 @@ app.use(function(_req: Request, res: Response, next: NextFunction) {
   res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   next();
 });
+
+app.use(morgan('dev'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
